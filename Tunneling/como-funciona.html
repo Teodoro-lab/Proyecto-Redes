@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Establecimiento de un enlace seguro de red: Tunelización (Tunneling)</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <a href="../index.html" class="inicio-button">Inicio</a>
+            <div class="title-and-nav">
+                <h1>Establecimiento de un enlace seguro de red: Tunelización (Tunneling)</h1>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">¿Qué es Tunneling?</a></li>
+                        <li><a href="encapsulamiento.html">Recordando Encapsulamiento</a></li>
+                        <li><strong><a href="como-funciona.html">¿Cómo utilizarlo?</a></strong></li>
+                        <li><a href="conclusion.html">Conclusión</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <section>
+            <h2>¿Cómo utilizarlo para envio de información de manera segura?</h2>
+            <p>
+                Los pasos serían los siguientes:
+
+                <ol>
+                    <li>Encriptación</li>
+                    <li>Encapsulación</li>
+                    <li>Adición de encabezado</li>
+                    <li>Transmisión</li>
+                    <li>Desencapsulación</li>
+                    <li>Desencriptación</li>
+                    <li>Entrega</li>
+                </ol>
+            </p>
+            
+            <p>El tunneling implica seis procesos clave: encriptación, encapsulación, adición de encabezado, transmisión, desencapsulación y desencriptación. Estos procesos ocurren tanto para el tráfico saliente como para el entrante.</p>
+            <ol>
+                <li>
+                    <p><span>Encriptación </span> : Los bits de datos conocidos como "paquetes" se encriptan para asegurar la seguridad y privacidad durante la transmisión.</p>
+                </li>                    
+                <li>
+                    <p><span>Encapsulación </span> : Los paquetes de datos encriptados se encapsulan dentro de un protocolo de red pública, un conjunto de reglas que gobiernan la comunicación y transmisión de datos en una red, y se convierten en el "payload" —los datos que se transmiten de forma segura.</p>
+                </li>
+                <li> 
+                    <p><span>Adición de encabezado</span> : Un encabezado especifica un extremo del túnel seguro como punto de origen y el otro como destino. Durante la encapsulación, un paquete de datos encriptados se envuelve en un protocolo de envoltura que añade un encabezado. En términos simples, este paso significa que el encabezado indica a los datos a dónde ir.</p>
+                </li>
+                <li>
+                    <p><span>Transmisión </span> : El paquete encapsulado (disfrazado) atraviesa la red pública sin ser notado.</p>
+                </li>
+                <li>
+                    <p><span>Desencapsulación </span> : Al llegar a la red local, los datos pasan por un proceso de desencapsulación. Este proceso implica la eliminación del encabezado añadido durante la fase de encapsulación. La desencapsulación revela el paquete de datos original que estaba encriptado, preparándolo para el siguiente paso del proceso.</p>
+                </li>
+                <li>
+                    <p><span>Desencriptación </span> : Una vez que el paquete de datos ha sido desencapsulado, el siguiente paso es la desencriptación. En esta etapa, el paquete de datos encriptado se transforma de nuevo a su formato original. Este proceso utiliza una clave de desencriptación, que es conocida solo por el remitente y el receptor, asegurando que solo las partes autorizadas puedan acceder a la información contenida en el paquete.</p>
+                </li>
+                <li>
+                    <p><span>Entrega </span> : Después de la desencriptación, los datos están ahora en un estado legible y seguro. El paquete es entonces entregado a la dirección IP de destino prevista. Este destino es típicamente un dispositivo o servidor dentro de la red privada del receptor, completando así el viaje seguro del paquete de datos a través de la red pública.</p>
+                </li>
+            </ol>
+        </section>
+        <section>
+            <h2>¿Qué protocolos se usan para el tunneling?</h2>
+            <p>
+                Los protocolos de tunneling más comunes son:
+                <ul>
+                    <li>Point-to-Point Tunneling Protocol (PPTP)</li>
+                    <li>Layer 2 Tunneling Protocol (L2TP)</li>
+                    <li>Internet Protocol Security (IPSec)</li>
+                    <li>Secure Shell (SSH)</li>
+                    <li>OpenVPN</li>
+                    <li>Secure Socket Tunneling Protocol (SSTP)</li>
+                </ul>
+            </p>
+            <p></p>
+        </section>
+
+        <section>
+            <h2>Ejemplos</h2>
+
+            <p>
+                En los ejemplos podemos observar cómo "percibimos" lo que sería un tunel, en el primer video tenemos un ejemplo de lo que sería un GRE tunnel, aunque este tunnel en realidad pasa por el internet y viaja a través de multiples router, la percepción que se tiene cuando se crea el tunel es que unicamente existe un salto unico entre dos routers para el envio de información.
+            </p>
+            <p>
+                Igualmente sabes por lo que nos comentan los instructores es que el tunel se crea y además formas de asgurar que el tunel mantenga la información segura, en el caso del video sobre el GRE tunnel, se menciona que se puede utilizar IPSec para asegurar la información que viaja a través del tunel.
+            </p>
+
+            <h3>¿Qué es IPsec?</h3>
+
+            <blockquote cite="https://aws.amazon.com/es/what-is/ipsec/#:~:text=El%20cifrado%20IPSec%20es%20una,descifrado%20para%20descifrar%20la%20informaci%C3%B3n.">
+                IPSec es un conjunto de reglas o protocolos de comunicación para configurar conexiones seguras a través de una red. El protocolo de Internet (IP) es el estándar común que determina cómo viajan los datos por Internet. IPSec agrega cifrado y autenticación para hacer que el protocolo sea más seguro. Por ejemplo, IPSec codifica los datos en el origen y los descodifica en su destino. También autentica el origen de los datos.
+            </blockquote>
+
+            <p>
+                En el otro caso en el de SHH tunnel podemos observar que lo que buscamos es que tenemos información que se encuentra de manera privada en una página en el servidor y podemos imaginarnos que podría tratarse de una empresa, pero que no se encuentra disponible para el público en general, osea que no está abierto el puerto 80, por lo que se crea un tunel para que la información pueda ser accedida por el usuario.
+            </p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/ZAFl4etjXs4?si=eukIyeEXRSXzQqmn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/x1yQF1789cE?si=IDpiM6m_Wp2rtwzM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </section>
+    </main>
+    
+    <footer>
+        <p>© 2023 Redes y Seguridad de Computadoras</p>
+    </footer>
+</body>
+
+</html>

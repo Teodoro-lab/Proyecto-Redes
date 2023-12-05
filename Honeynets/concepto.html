@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seguridad en Red: Honey nets</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <a href="../index.html" class="inicio-button">Inicio</a>
+            <div class="title-and-nav">
+                <h1>Seguridad en Red: Honeynets</h1>
+                <nav>
+                    <ul>
+                        <li><a href="introduction.html">Introducción</a></li>
+                        <li><b><a href="concepto.html">Definición</a></b></li>
+                        <li><a href="arquitectura.html">Arquitectura</a></li>
+                        <li><a href="honeynetsVirtuales.html">Honeynets Virtuales</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="contenido">
+            <h2>Definición de Honeynets</h2>
+            <p>Una honeynet es el honeypot más complejo, el que ofrece un nivel más alto de interacción con el intruso y el que permite
+            recopilar mayor cantidad de información relativa a un ataque. Sin embargo, lejos de ser una herramienta empaquetada y
+            lista para ser instalada, una honeynet es una red completa que contiene un conjunto de sistemas dispuestos para ser
+            atacados</p>
+
+            <p>
+                Una honeynet puede contener cualquier componente de red imaginable, incluyendo routers y switches, lo que le permite
+                replicar la red de cualquier organización. Este hecho, unido a que los equipos que contiene son sistemas reales con
+                servicios y configuraciones habituales, hace que los riesgos y las vulnerabilidades que permite descubrir sean
+                exactamente las mismas que se pueden encontrar en cualquier organización que cuente con sistemas similares a los
+                expuestos.
+            </p>
+            <img src="../images/honeynet.png" alt="honeypot" class="imagen-texto" width="400">
+            <p>
+                Aparte de los sistemas destinados a recibir los ataques, una honeynet cuenta con un conjunto de dispositivos adicionales
+                que le permiten detectar, filtrar y registrar tanto el tráfico que entra y sale de la red como las acciones de un
+                intruso en el interior de un sistema de la red de señuelos tras su compromiso. Todo esto se realiza de forma pasiva, para 
+                que el intruso no note ningún comportamiento extraño que le induzca a pensar que está siendo vigilado.
+            </p>
+            <h3>Funciones</h3>
+
+            <ul>
+                <li>
+                    <p><b>Control del intruso:</b> Cuando un honeypot del interior de la honeynet sea comprometido por un intruso, será necesario
+                    tener la garantía de que no pueda ser utilizado para atacar otros sistemas que no pertenezcan a la honeynet. Con este
+                    fin, es preciso controlar todas y cada una de las conexiones que el atacante trate de realizar desde el sistema
+                    comprometido, fil- trando aquellas que puedan ser nocivas.</p>
+                </li>
+                <li>
+                    <p>
+                        <b>Captura de datos:</b> La clave del éxito de una honeynet radica en su capacidad para capturar la mayor cantidad de
+                        información que sea po- sible, pues serán estos datos los que van a permitir estudiar las utilidades, tácticas y mo-
+                        tivos de la comunidad de atacantes. Es fun- damental capturar todo el tráfico que entre o salga de la honeynet, así como
+                        cualquier acti- vidad del intruso en el interior de un sistema comprometido.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b>Centralización de información:</b> Para conse- guir un mejor rendimiento en escenarios con distintas honeynets dispersas
+                        por Internet es recomendable que la información capturada se envíe de forma segura a un servidor cen- tralizado para su
+                        almacenamiento y análisis. De este modo se puede tener un mayor con- trol sobre los datos recogidos, se pueden re-
+                        aprovechar experiencias y se puede obtener una imagen más clara de la evolución de los diferentes ataques presentes en
+                        La Red.
+                    </p>
+                </li>
+            </ul>
+            <p>
+                Mientras que un honeypot es un único sistema o recurso, una "honeynet" es una red de varios honeypots,
+                diseñada para
+                imitar una red informática completa. Al igual que los honeypots individuales, las honeynets son valiosas
+                para estudiar
+                el comportamiento y las estrategias de los atacantes. Ofrecen una perspectiva más amplia, permitiendo a
+                los defensores
+                observar cómo los atacantes interactúan con redes enteras, cómo se mueven lateralmente dentro de ellas y
+                qué técnicas
+                utilizan para evadir la detección.</p>
+            <img src="../images/funcioneshoneynet.png" alt="honeynet" class="imagen-texto" width="400">
+        </section>
+    </main>
+    <footer>
+        <p>© 2023 Redes y Seguridad de Computadoras</p>
+    </footer>
+</body>
+
+</html>
